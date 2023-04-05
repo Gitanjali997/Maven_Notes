@@ -1,0 +1,50 @@
+The maven repository manager can be used to create different types of repositories Hosted Repository, Proxy Repository and group repository, a hosted repository allows us to host our artifact like
+jars, wars, etc..
+Here you can see there is MAVEN snapshots and MAVEN releases. So when you create a hosted repository, you can create one for snapshots, one for releases.
+.
+Proxy repos are used to cache dependencies from maven central to nexus maven-central repo so that we reduce access to online central repo. We define this under repository tag.
+
+Hosted repositories can be maven-snapshots or maven-release. In this we can upload/host our build artifacts to these repositories. In Pom this is defined under distribution management>repostitory.
+
+Settings.xml:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+
+  <servers>
+    <server>
+      <id>nexus-snapshots</id>
+      <username>admin</username>
+      <password>Anj1@997</password>
+    </server>
+  </servers>
+
+  <mirrors>
+    <mirror>
+      <id>central</id>
+      <name>central</name>
+      <url>http://localhost:8081/repository/maven-group/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+
+</settings>
+
+Pom.xml:
+
+<repositories>
+		<repository>
+			<id>maven-group</id>
+			<url>http://localhost:8081/repository/maven-group/</url>
+		</repository>
+	</repositories>
+	#above repository tag is used to download artifacts from maven central and save to your local nexus proxy repository
+	<distributionManagement>
+		<repository>
+			<id>nexus-snapshot</id>
+			<url>http://localhost:8081/repository/maven-group/</url>
+		</repository>
+	</distributionManagement>
+# above distribution management tag is to upload build artifacts to nexus hosted repo. 

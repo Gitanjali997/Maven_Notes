@@ -1,0 +1,15 @@
+	• If we are using a dependency in parent project which is defined under dependency mgmt and same dependency is used in child projects (or same project or any sub project), it will synchronize dependency version in all child projects with the parent project. 
+
+	• We need not to define dependency version in child projects in above case.
+
+	• <dependencyManagement>
+	      <dependencies>
+	           <dependency>
+	               <groupID></groupID>
+	                <artifactID></artifactID>
+	                 <version></version>
+	            </dependency>
+	      </dependencies>
+	</dependencyManagement>
+	
+

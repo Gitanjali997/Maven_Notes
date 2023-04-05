@@ -1,0 +1,9 @@
+	• Plugin consist of various goals.
+
+	• Example: archetype:generate (Here archetype plugin has generate goal)
+
+	• pluginID:goalId
+
+	• Maven uses pulgins to perform task. Like compiler plugin to compile the project.
+
+	• Maven gets default plugins (like compiler jar war etc) from parent setting. But they can we overwritten in POM file.

@@ -1,0 +1,28 @@
+	• Keep setting.xml under .m2 directory which is under users directory
+
+	• Settings.xml: 
+	<settings>
+	    <pluginGroups>
+	        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+	    </pluginGroups>
+	    <profiles>
+	        <profile>
+	            <id>sonar</id>
+	            <activation>
+	                <activeByDefault>true</activeByDefault>
+	            </activation>
+	        </profile>
+	     </profiles>
+	</settings>
+
+	• Download sonar
+
+	• Go under bin folder then under respective os folder
+
+	• Do ./sonar.sh start (from command line)
+
+	• Browse localhost:9000
+
+	• Go to accounts and generate token
+
+	• Maven command: mvn clean verify sonar:sonar -Dsonar.login=<generated token>

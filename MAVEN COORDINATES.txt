@@ -1,0 +1,22 @@
+	• Coordinates are defined in POM which gives information about the project.
+
+	• Coordinates:
+
+		- groupID
+		- artifactID
+		- Version
+		- Packaging
+
+	• Internally in maven coordinates are defined as:
+
+		groupID:artifactID:packaging:version
+		
+	• Naming conventions for coordinates:
+		
+		- GroupId - com.apache, org.oracle etc.
+		
+		- artifactId- sub element of groupid. It names our project. Final jar or war will be named with artifactid.
+		
+		- Version- if we are continuously developing a project and not releasing it, Initially it will have snapshot in its version later it will have a solid version (like 1.0 2.0). 
+		
+		- Packaging- tells the type of project it could be war/jar/ear etc.

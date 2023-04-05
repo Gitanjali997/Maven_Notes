@@ -1,0 +1,16 @@
+• If we are using a PLUGIN in parent project which is defined under plugin mgmt and same plugin is used in child projects (or same project or any sub project), it will synchronize plugin version and also configuration in all child projects with the parent project. 
+
+• We need not to define plugin version in child projects in above case.
+
+• <build>
+  <pluginManagement>
+      <plugins>
+           <plugin>
+               <groupID></groupID>
+                <artifactID></artifactID>
+                 <version></version>
+                  <configuration></configuration>
+            </plugin>
+      </plugins>
+   </pluginManagement>
+</build>

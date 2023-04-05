@@ -1,0 +1,12 @@
+OMPILE: test, run,build
+
+PROVIDED: test, run, servlet api
+
+RUNTIME: test, run
+
+TEST: test, run, junit
+
+SYSTEM: <systempath>
+
+IMPORT: for POM based projects not war, jar etc
+

@@ -1,0 +1,33 @@
+	• The Jacoco code coverage plugin will analyze and see how much or how many classes and methods within our project are being covered by the tests that are run.
+
+	•  It creates a report under target>site>jacoco.
+	• Sample : file:///C:/Users/Welcome/eclipse-workspace/demoprofile/target/site/jacoco/profiles/index.source.html
+	• Plugin syntax: 
+
+	 <plugin>
+	    <groupId>org.jacoco</groupId>
+	    <artifactId>jacoco-maven-plugin</artifactId>
+	    <version>0.8.7</version> 
+	    <-- above groupid and artifact can be obtained from jacoco official website --/>
+	    <executions>
+	        <execution>
+	           <-- prepare-agent prepare the Jacoco code coverage agent so that it can run and it can generate the test coverage reports for us. If you do not associate this execution with any face, this agent will be executed right during the Maven initialization phase for our project, even before the code is compiled and all that --!>
+	            <goals>
+	                <goal>prepare-agent</goal>
+	            </goals>
+	        </execution>
+	        <execution>
+	            <id>report</id>
+	            <phase>test</phase>
+	            <goals>
+	                <goal>report</goal>
+	            </goals>
+	        </execution>
+	    </executions>
+	</plugin>
+	
+	• Command: mvn clean verify
+	• Verify is a phase in Maven that runs and checks the results of tests before verification.
+	The validation, the compilation, all those phases will be executed, the test will be run and then
+	the verification phase will be executed
+	

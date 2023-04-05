@@ -1,0 +1,12 @@
+	• Maven has multiple life cycle phases:
+
+		- Process-resources (resources:resources)
+		- Compile (compiler:compiler)
+		- Test (surefire:test)
+		- Package (jar:jar)
+	
+	• Every phase is associated with plugin:goal. When we execute a phase at backend it’s the plugin and goals that are exceuted and performs the task.
+
+	• If we execute test phase, all phases before it will be auto executed.
+
+	• Example: mvn test (this will first run process-resources phase then compile phase and then test phase will be executed. Package phase will not be executed in this case)

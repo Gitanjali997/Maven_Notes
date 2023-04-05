@@ -1,0 +1,12 @@
+	• archetypeartifactId for web application: maven-archetype-webapp
+
+	• Index.jsp file is where application is
+
+	• Artifacts are packaged as war files.
+
+	• Packaging: war
+
+	• War file name can be changed at: 
+	<finalName>productweb</finalName>
+
+	• Wars are placed at: /target/productweb.war

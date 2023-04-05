@@ -1,0 +1,9 @@
+	• Maven central repository: https://repo.maven.apache.org/maven2/
+
+	• Enterprise repository: any of the files that are not available on maven central repo we can create an enterprise repo and keep that jar in it and then that jar can be used over all the projects in the enterprise.
+
+	• Local repository: maven creates a local repo in developer's machine in which every jar/war that is downloaded from central is kept so that everytime we need not to take it from central.
+	• Local repositories are created under user directory then under .m2 then repositories
+	• Projects can be seen under repositories under com
+
+		- Location for local : C:\Users\Welcome\.m2

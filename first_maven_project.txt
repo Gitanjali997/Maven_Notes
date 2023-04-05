@@ -1,0 +1,12 @@
+	• Maven Command to create a Project:
+
+            mvn archetype:generate -DgroupId=test -DartifactId=multiplepom -DarchetpeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+	• When we create a maven project a POM(project object model) xml is created with basic details of the project. We can further modify pom.xml file as per      the requirement.
+	• Source project go inside src/main/java/groupId
+	• Unit Tests go under src/test/java/groupId
+	• GroupId is used to create packages
+	• archetypeartifactId tells type of project we want to create
+	• Standalone projects are packages as jars
+	
+	

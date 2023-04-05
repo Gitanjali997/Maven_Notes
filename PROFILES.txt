@@ -1,0 +1,27 @@
+Portability: to build the application across different environments without changing any configuration or by changing a little configuration maven allows build portability through its profiles.
+
+Profile folder: src/main/profiles (inside profile folder we will create particular folder for specific environment)
+
+NOTE: in properties file we can store credentials, url etc.
+
+Command: mvn install --activate-profiles (dev/test/prod) (this will pick the particular profile)
+
+Pom configuration:
+
+<profiles>
+<profile>
+<id>dev</id>
+<properties>
+<build.profile.id>dev</build.profile.id>
+</properties>
+<build>
+<resources>
+<resource>
+<directory>src/main/profiles/dev</directory>
+</resource>
+</resources>
+</build>
+</profile>
+</profiles>
+
+Output: inside .jar artifact 

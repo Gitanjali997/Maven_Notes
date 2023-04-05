@@ -1,0 +1,7 @@
+	• In this we have a parent project.
+
+	• This parent project have child modules which belong to parent project.
+
+	• For this we update parent and child POMs, add parent tag in child pom and module tag in parent pom consisting of child module name.
+
+	• Child modules should have same groupId as that of Parent Project.

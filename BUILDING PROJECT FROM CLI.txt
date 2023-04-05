@@ -1,0 +1,14 @@
+	• Command to build maven project:
+
+	  mvn install (build and compiles the project and packages the compiled classes in form of jar under target folder)
+	
+	• Packages are deployed under target directory
+	
+	• All compiled classes are under "classes" folder under target folder.
+
+	• Command to run program:
+	
+	java -cp target/mavenphasedemo-1.0-SNAPSHOT.jar test.App
+
+	• Test.App is class name
+	• Web applications are packaged into war files
